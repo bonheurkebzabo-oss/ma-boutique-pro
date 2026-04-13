@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛍️ Boutique Pro</h1>
+  </header>
+
+  <section id="auth">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="register()">S'inscrire</button>
+    <button onclick="login()">Se connecter</button>
+    <button onclick="logout()">Se déconnecter</button>
+  </section>
+
+  <h2>Produits</h2>
+  <div id="products"></div>
+
+  <h2>Panier</h2>
+  <ul id="cart"></ul>
+  <button onclick="payer()">Payer</button>
+
+  <h2>Admin</h2>
+  <input type="text" id="pname" placeholder="Nom produit">
+  <input type="number" id="pprice" placeholder="Prix">
+  <button onclick="addProduct()">Ajouter produit</button>
+
+  <!-- Firebase (version compat pour simplicité) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
